@@ -1,0 +1,8 @@
+{
+  "rewrites": [
+    {
+      "source": "/api/:path*",
+      "destination": "https://hrone-backend-v5ft.onrender.com/:path*"
+    }
+  ]
+}

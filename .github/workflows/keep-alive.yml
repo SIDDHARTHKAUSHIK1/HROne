@@ -1,0 +1,25 @@
+name: Keep Backend Alive
+
+on:
+  schedule:
+    # Runs every 10 minutes (Render free tier spins down after 15 min of inactivity)
+    - cron: '*/10 * * * *'
+  workflow_dispatch: # Allows manual trigger from GitHub Actions tab
+
+jobs:
+  ping:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Ping Render Health Check
+        run: |
+          echo "Pinging backend at $(date -u)..."
+          RESPONSE=$(curl -s -w "\n%{http_code}" https://hrone-backend-v5ft.onrender.com/health)
+          HTTP_CODE=$(echo "$RESPONSE" | tail -n1)
+          BODY=$(echo "$RESPONSE" | sed '$d')
+          echo "HTTP Status: $HTTP_CODE"
+          echo "Response Body: $BODY"
+          if [ "$HTTP_CODE" -eq 200 ]; then
+            echo "Backend is awake and operational!"
+          else
+            echo "Backend responded with code $HTTP_CODE"
+          fi

@@ -1,0 +1,442 @@
+@import "tailwindcss";
+
+@layer base {
+  html.dark {
+    color-scheme: dark;
+  }
+  html.light {
+    color-scheme: light;
+  }
+  body {
+    @apply font-sans antialiased text-slate-100 bg-slate-900 transition-colors duration-200;
+  }
+}
+
+/* ========================================================================= */
+/* Light Mode Theme System & High-Contrast Typography                      */
+/* ========================================================================= */
+
+html.light body {
+  background-color: #f8fafc !important;
+  color: #0f172a !important;
+}
+
+/* Containers & Layout */
+html.light .bg-slate-900 {
+  background-color: #f8fafc !important;
+  color: #0f172a !important;
+}
+
+html.light aside,
+html.light header,
+html.light .bg-slate-950,
+html.light .bg-slate-950\/60,
+html.light .bg-slate-950\/80 {
+  background-color: #ffffff !important;
+  border-color: #e2e8f0 !important;
+  box-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.05), 0 1px 2px -1px rgb(0 0 0 / 0.05);
+}
+
+/* Borders */
+html.light .border-slate-800,
+html.light .border-slate-800\/80,
+html.light .border-slate-700,
+html.light .border-slate-700\/60,
+html.light .border-slate-700\/80 {
+  border-color: #e2e8f0 !important;
+}
+
+/* Typography & Contrast for General Text (Headings, Paragraphs, Labels) */
+html.light :not(button, button *, .bg-indigo-600, .bg-emerald-600).text-white {
+  color: #0f172a !important;
+  font-weight: 700 !important;
+}
+
+/* Keep brand logo badge text crisp white in light mode */
+html.light .bg-indigo-600.text-white {
+  color: #ffffff !important;
+}
+
+html.light :not(button, button *).text-slate-100 {
+  color: #0f172a !important;
+  font-weight: 600 !important;
+}
+
+html.light :not(button, button *).text-slate-200 {
+  color: #1e293b !important;
+  font-weight: 600 !important;
+}
+
+html.light :not(button, button *).text-slate-300 {
+  color: #334155 !important;
+  font-weight: 500 !important;
+}
+
+html.light :not(button, button *).text-slate-400 {
+  color: #475569 !important;
+  font-weight: 500 !important;
+}
+
+html.light :not(button, button *).text-slate-500 {
+  color: #64748b !important;
+}
+
+/* ========================================================================= */
+/* ACCENT COLORS & ICONS: ALIGNED FOR LIGHT & DARK MODES                    */
+/* ========================================================================= */
+
+/* Harmonize pastel -400 accent icons & metrics to rich -600 shades on white */
+html.light :not(button.bg-indigo-600 *, button.bg-emerald-600 *).text-indigo-400 {
+  color: #4f46e5 !important;
+}
+
+html.light :not(button.bg-indigo-600 *, button.bg-emerald-600 *).text-emerald-400 {
+  color: #059669 !important;
+}
+
+html.light :not(button.bg-indigo-600 *, button.bg-emerald-600 *).text-sky-400 {
+  color: #0284c7 !important;
+}
+
+html.light :not(button.bg-indigo-600 *, button.bg-emerald-600 *).text-amber-400 {
+  color: #d97706 !important;
+}
+
+html.light :not(button.bg-indigo-600 *, button.bg-emerald-600 *).text-rose-400 {
+  color: #e11d48 !important;
+}
+
+/* KPI Metric Card Icon Badges - Light Mode */
+html.light .icon-badge-indigo,
+html.light .bg-indigo-950\/60,
+html.light .bg-indigo-500\/15 {
+  background-color: #eef2ff !important;
+  border-color: #c7d2fe !important;
+  color: #4f46e5 !important;
+}
+
+html.light .icon-badge-indigo svg {
+  color: #4f46e5 !important;
+  stroke: #4f46e5 !important;
+}
+
+html.light .icon-badge-emerald,
+html.light .bg-emerald-950\/60,
+html.light .bg-emerald-500\/15 {
+  background-color: #ecfdf5 !important;
+  border-color: #a7f3d0 !important;
+  color: #059669 !important;
+}
+
+html.light .icon-badge-emerald svg {
+  color: #059669 !important;
+  stroke: #059669 !important;
+}
+
+html.light .icon-badge-sky,
+html.light .bg-sky-950\/60,
+html.light .bg-sky-500\/15 {
+  background-color: #f0f9ff !important;
+  border-color: #bae6fd !important;
+  color: #0284c7 !important;
+}
+
+html.light .icon-badge-sky svg {
+  color: #0284c7 !important;
+  stroke: #0284c7 !important;
+}
+
+html.light .icon-badge-amber,
+html.light .bg-amber-950\/60,
+html.light .bg-amber-500\/15 {
+  background-color: #fffbeb !important;
+  border-color: #fde68a !important;
+  color: #d97706 !important;
+}
+
+html.light .icon-badge-amber svg {
+  color: #d97706 !important;
+  stroke: #d97706 !important;
+}
+
+/* Leaderboard Competition Rank Badges - Light Mode */
+html.light .rank-badge-1 {
+  background-color: #fef3c7 !important;
+  color: #b45309 !important;
+  border-color: #fcd34d !important;
+}
+
+html.light .rank-badge-2 {
+  background-color: #f1f5f9 !important;
+  color: #334155 !important;
+  border-color: #cbd5e1 !important;
+}
+
+html.light .rank-badge-3 {
+  background-color: #ffedd5 !important;
+  color: #c2410c !important;
+  border-color: #fdba74 !important;
+}
+
+html.light .rank-badge-other {
+  background-color: #f8fafc !important;
+  color: #475569 !important;
+  border-color: #e2e8f0 !important;
+}
+
+/* Interactive Controls & Cards */
+html.light .bg-slate-900\/60,
+html.light .bg-slate-900\/80 {
+  background-color: #f8fafc !important;
+  border-color: #e2e8f0 !important;
+}
+
+html.light input,
+html.light select {
+  background-color: #ffffff !important;
+  color: #0f172a !important;
+  border-color: #cbd5e1 !important;
+  font-weight: 500 !important;
+}
+
+html.light input::placeholder {
+  color: #94a3b8 !important;
+}
+
+/* ========================================================================= */
+/* BUTTONS: ROBUST STYLING & HIGH CONTRAST (LIGHT & DARK MODES)            */
+/* ========================================================================= */
+
+/* 1. Primary / Accent Buttons (Indigo, Emerald, Rose)                       */
+/* Must ALWAYS keep crisp, pure white text and stroke in BOTH dark and light */
+button.bg-indigo-600,
+button.bg-indigo-700,
+button.bg-emerald-600,
+button.bg-emerald-700,
+button.bg-rose-600,
+button.bg-rose-700,
+html.light button.bg-indigo-600,
+html.light button.bg-indigo-700,
+html.light button.bg-emerald-600,
+html.light button.bg-emerald-700,
+html.light button.bg-rose-600,
+html.light button.bg-rose-700 {
+  color: #ffffff !important;
+  font-weight: 600 !important;
+  box-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1) !important;
+}
+
+button.bg-indigo-600 *,
+button.bg-indigo-700 *,
+button.bg-emerald-600 *,
+button.bg-emerald-700 *,
+html.light button.bg-indigo-600 *,
+html.light button.bg-indigo-700 *,
+html.light button.bg-emerald-600 *,
+html.light button.bg-emerald-700 * {
+  color: #ffffff !important;
+  stroke: #ffffff !important;
+}
+
+/* 2. Secondary & Utility Buttons in Light Mode                             */
+/* (Refresh buttons, modal controls, general actions)                       */
+html.light button.bg-slate-800,
+html.light button.bg-slate-900,
+html.light button.bg-slate-950,
+html.light button.bg-slate-700,
+html.light .btn-secondary {
+  background-color: #ffffff !important;
+  color: #0f172a !important;
+  border: 1px solid #cbd5e1 !important;
+  font-weight: 600 !important;
+  box-shadow: 0 1px 2px 0 rgb(0 0 0 / 0.05) !important;
+}
+
+html.light button.bg-slate-800:hover,
+html.light button.bg-slate-900:hover,
+html.light button.bg-slate-950:hover,
+html.light button.bg-slate-700:hover,
+html.light .btn-secondary:hover {
+  background-color: #f1f5f9 !important;
+  color: #0f172a !important;
+  border-color: #94a3b8 !important;
+}
+
+html.light button.bg-slate-800 svg,
+html.light button.bg-slate-900 svg,
+html.light button.bg-slate-950 svg,
+html.light button.bg-slate-700 svg,
+html.light .btn-secondary svg {
+  color: #475569 !important;
+  stroke: #475569 !important;
+}
+
+html.light button.bg-slate-800:hover svg,
+html.light button.bg-slate-900:hover svg,
+html.light button.bg-slate-950:hover svg,
+html.light button.bg-slate-700:hover svg,
+html.light .btn-secondary:hover svg {
+  color: #0f172a !important;
+  stroke: #0f172a !important;
+}
+
+/* 3. Table Action / Regularize Button in Attendance Table                   */
+html.light td button.action-btn,
+html.light td button.bg-slate-800 {
+  background-color: #eef2ff !important;
+  border: 1px solid #c7d2fe !important;
+  color: #4338ca !important;
+  font-weight: 600 !important;
+  box-shadow: 0 1px 2px 0 rgb(99 102 241 / 0.08) !important;
+}
+
+html.light td button.action-btn:hover,
+html.light td button.bg-slate-800:hover {
+  background-color: #e0e7ff !important;
+  border-color: #818cf8 !important;
+  color: #312e81 !important;
+}
+
+html.light td button.action-btn svg,
+html.light td button.bg-slate-800 svg {
+  color: #4f46e5 !important;
+  stroke: #4f46e5 !important;
+}
+
+html.light td button.action-btn:hover svg,
+html.light td button.bg-slate-800:hover svg {
+  color: #3730a3 !important;
+  stroke: #3730a3 !important;
+}
+
+/* 4. Theme Toggle Button in Navbar                                          */
+html.light .theme-toggle-btn {
+  background-color: #ffffff !important;
+  border: 1px solid #cbd5e1 !important;
+  color: #0f172a !important;
+  font-weight: 600 !important;
+}
+
+html.light .theme-toggle-btn:hover {
+  background-color: #f1f5f9 !important;
+  border-color: #94a3b8 !important;
+  color: #0f172a !important;
+}
+
+html.light .theme-toggle-btn svg {
+  color: #4f46e5 !important;
+  stroke: #4f46e5 !important;
+}
+
+/* 5. Navigation & Sidebar Buttons + Icons                                   */
+html.light aside nav button,
+html.light nav[aria-label="Mobile Navigation"] button {
+  color: #475569 !important;
+}
+
+html.light aside nav button svg,
+html.light nav[aria-label="Mobile Navigation"] button svg {
+  color: #64748b !important;
+  stroke: #64748b !important;
+}
+
+html.light aside nav button:hover,
+html.light nav[aria-label="Mobile Navigation"] button:hover {
+  background-color: #f1f5f9 !important;
+  color: #0f172a !important;
+}
+
+html.light aside nav button:hover svg,
+html.light nav[aria-label="Mobile Navigation"] button:hover svg {
+  color: #0f172a !important;
+  stroke: #0f172a !important;
+}
+
+html.light aside nav button.bg-indigo-600\/15,
+html.light nav[aria-label="Mobile Navigation"] button.bg-indigo-600\/15,
+html.light tr.bg-indigo-600\/15 {
+  background-color: #eef2ff !important;
+  color: #4f46e5 !important;
+  border-color: #c7d2fe !important;
+  font-weight: 600 !important;
+}
+
+html.light aside nav button.bg-indigo-600\/15 svg,
+html.light nav[aria-label="Mobile Navigation"] button.bg-indigo-600\/15 svg {
+  color: #4f46e5 !important;
+  stroke: #4f46e5 !important;
+}
+
+html.light .bg-slate-900\/70,
+html.light .bg-slate-900\/30 {
+  background-color: #f8fafc !important;
+  border-color: #e2e8f0 !important;
+}
+
+/* Table rows */
+html.light tbody tr {
+  border-color: #f1f5f9 !important;
+}
+
+html.light tbody tr:hover {
+  background-color: #f8fafc !important;
+}
+
+/* Status Pills & Badges */
+html.light .bg-emerald-950,
+html.light .bg-emerald-950\/50 {
+  background-color: #ecfdf5 !important;
+  color: #065f46 !important;
+  border-color: #a7f3d0 !important;
+  font-weight: 600 !important;
+}
+
+html.light .bg-rose-950,
+html.light .bg-rose-950\/50,
+html.light .bg-rose-950\/40 {
+  background-color: #fff1f2 !important;
+  color: #9f1239 !important;
+  border-color: #fecdd3 !important;
+  font-weight: 600 !important;
+}
+
+html.light .bg-amber-950,
+html.light .bg-amber-950\/50 {
+  background-color: #fffbeb !important;
+  color: #92400e !important;
+  border-color: #fde68a !important;
+  font-weight: 600 !important;
+}
+
+html.light .bg-indigo-950,
+html.light .bg-indigo-950\/50,
+html.light .bg-indigo-950\/40 {
+  background-color: #eef2ff !important;
+  color: #3730a3 !important;
+  border-color: #c7d2fe !important;
+  font-weight: 600 !important;
+}
+
+html.light .bg-sky-950,
+html.light .bg-sky-950\/50 {
+  background-color: #f0f9ff !important;
+  color: #0369a1 !important;
+  border-color: #bae6fd !important;
+  font-weight: 600 !important;
+}
+
+/* Chart Tooltips */
+html.light .recharts-default-tooltip {
+  background-color: #ffffff !important;
+  border-color: #e2e8f0 !important;
+  color: #0f172a !important;
+  box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1) !important;
+}
+
+html.light .recharts-cartesian-grid line {
+  stroke: #e2e8f0 !important;
+}
+
+html.light .recharts-text {
+  fill: #64748b !important;
+}
